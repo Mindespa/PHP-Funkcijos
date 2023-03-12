@@ -91,9 +91,93 @@ function numbers(){
 
     echo "<h1>" . $txt . "</h1>";
 }
+echo "<hr>";
+
+// Parašykite funkciją kuri sugeneruotų 10 p tagų su skaičiais juose nuo 1 iki 10
+//  ir atvaizduotų naršylkėje.
+//  Rezultate HTML’e turi matytis 10 p tagų su skaičiais.
+
+echo "<p>" . "7 Udavinys ". "</p>";
 
 
-;
+ptag();
+function ptag() 
+{
+    for ($i=1; $i < 10; $i++) { 
+        echo "<p> $i </p>";
+    }
+}
+echo "<hr>";
+
+// Sukurkite funkciją kuri priimtų 3 kintamuosius $min, $max ir $length,
+// sugeneruotų random masyvą $length ilgio, užpildytų random skaičiais $min $max intervale.
+
+echo "<p>" . "8 Udavinys ". "</p>";
+
+function kintamieji($min,$max,$length)
+{
+    $arr = [];
+    for ($i=0; $i < $length; $i++) { 
+    $arr[] = rand($min,$max);
+    }
+    return $arr;
+}
+
+print_r(kintamieji(5,10,7));
+
+echo "<hr>";
+
+// Parašykite funkciją kuri priimtų tekstą kintamąjį
+// ir į gražintų “apsuktą” pvz paduodate Naglis, gaunate silgaN.
+
+echo "<p>" . "9 Udavinys ". "</p>";
+
+function namerev($name)
+{
+    return strrev($name);
+
+}
+echo "<h1>" . namerev("Minnado") . "</h1>";
+echo "<hr>";
+
+
+
+echo "<h2>" . "Sunkesni". "</h2>";
+
+echo "<p>" . "1 Udavinys ". "</p>";
+
+// Parašykite funkciją, kurios argumentas būtų tekstas, kuris yra įterpiamas į h1 tagą;
+
+function arg($oras)
+{
+    echo "<h1>" . $oras. "</h1>";
+}
+
+arg("Dabar sninga");
+echo "<hr>";
+
+// Parašykite funkciją su dviem argumentais, pirmas argumentas tekstas, įterpiamas į h tagą,
+//  o antrasis tago numeris (1-6).
+//  Rašydami šią funkciją remkitės pirmame uždavinyje parašytą funkciją;
+
+echo "<p>" . "2 Udavinys ". "</p>";
+
+function argumentas($oras,$h1)
+{
+    echo "<h1>" . $oras . $h1 . "</h1>";
+}
+
+argumentas("Dabar sninga"," "."tag1");
+echo "<hr>";
+
+// Parašykite funkciją, kuri skaičiuotų, iš kiek sveikų skaičių jos argumentas dalijasi be liekanos 
+// (išskyrus vienetą ir patį save) Argumentą užrašykite taip, kad būtų galima įvesti tik sveiką skaičių;
+
+echo "<p>" . "4 Udavinys ". "</p>";
+
+
+
+
 ?>
 </body>
 </html>
