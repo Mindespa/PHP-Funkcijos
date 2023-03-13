@@ -175,7 +175,28 @@ echo "<hr>";
 
 echo "<p>" . "4 Udavinys ". "</p>";
 
+function sveikas($skaicius) {
+ $count=0;
+ for ($i=2; $i < $skaicius ; $i++) { 
+     if ($skaicius % $i == 0 ){
+        $count++;
+     }
+ }   
+ return $count;
+}
+echo sveikas(10);
+echo "<hr>";
 
+
+
+
+
+// Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77.
+//  Išrūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka,
+//  panaudodami ketvirto uždavinio funkciją.
+
+
+echo "<p>" . "5 Udavinys ". "</p>";
 
 
 ?>
